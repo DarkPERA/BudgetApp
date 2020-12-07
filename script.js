@@ -169,16 +169,17 @@ let dataManipulation = (
        <div class='value_item_rashod'>- %vrednost%<div class='percentage_rashod'>%perc%</div></div>\
        <button class='btn_rashod'>✖</button>\
    </div>";
+   let formatter = new Intl.NumberFormat('en');
             if (tip == 'Dohodak') {
                 dohodak = dohodak.replace('%id%', id);
                 dohodak = dohodak.replace('%naziv%', naziv);
-                dohodak = dohodak.replace('%vrednost%', vrednost);
+                dohodak = dohodak.replace('%vrednost%', formatter.format(vrednost));
                 return dohodak;
             }
             if (tip == 'Rashod') {
                 rashod = rashod.replace('%id%', id);
                 rashod = rashod.replace('%naziv%', naziv);
-                rashod = rashod.replace('%vrednost%', vrednost);
+                rashod = rashod.replace('%vrednost%', formatter.format(vrednost));
                 return rashod;
             }
             if (tip == 'profile') {
@@ -237,19 +238,20 @@ let dataManipulation = (
                 let meseci = ['Januar','Februar','Mart','April','Maj','Jun','Jul','Avgust','Septembar','Oktobar','Novembar','Decembar'];
                 let tekst;
                 let datum = new Date();
-                tekst = meseci[datum.getMonth()] + ' '+datum.getFullYear();
+                tekst = datum.getDate()+'. '+ meseci[datum.getMonth()] + ' '+datum.getFullYear();
                 document.querySelector('.datum').textContent = document.querySelector('.datum').textContent.replace('%date%',tekst);
             },
             displayInfo: function () {
                 let budg;
+                let formatter = new Intl.NumberFormat('en');
                 if(( Math.floor(profileModule.currentProfileInfoObj().budzet * 100) / 100)>=0){
-                    budg = '+ '+( Math.floor(profileModule.currentProfileInfoObj().budzet * 100) / 100).toString();
+                    budg = '+ '+( formatter.format(Math.floor(profileModule.currentProfileInfoObj().budzet * 100) / 100)).toString();
                 }
                 else 
                 budg =  Math.floor(profileModule.currentProfileInfoObj().budzet * 100) / 100;
                 document.querySelector('.global_budzet').textContent = budg;
-                document.querySelector('.dohodak .value').textContent ='+ '+ (Math.floor(profileModule.currentProfileInfoObj().ukudohodak * 100) / 100).toString();
-                document.querySelector('.rashod .value').textContent ='- '+ (Math.floor(profileModule.currentProfileInfoObj().ukurashod * 100) / 100).toString();
+                document.querySelector('.dohodak .value').textContent ='+ '+ (formatter.format(Math.floor(profileModule.currentProfileInfoObj().ukudohodak * 100) / 100)).toString();
+                document.querySelector('.rashod .value').textContent ='- '+ (formatter.format(Math.floor(profileModule.currentProfileInfoObj().ukurashod * 100) / 100)).toString();
                 let perc = ((Math.floor(Math.round((profileModule.currentProfileInfoObj().ukurashod / profileModule.currentProfileInfoObj().ukudohodak) * 10000))) / 100).toString();
                 if (isNaN(perc) || perc <= 0 || perc == 'Infinity') {
                     document.querySelector('.rashod .percentage').textContent = '0%';
