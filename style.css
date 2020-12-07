@@ -1,0 +1,435 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    height: 100vh;
+    width:100%;
+    color:whitesmoke;
+    font-family: 'Lato', sans-serif;
+    
+}
+.top_container{
+    position:relative;
+    height:45%;
+    background:url(slika.jpg);
+    background-repeat: no-repeat;
+    background-position-y: 25%;
+    background-size: cover;
+}
+.datum{
+    padding-top: 15px;;
+    font-size: 25px;
+    width:50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.header{
+    position:relative;
+}
+
+.global_budzet,.dohodak, .rashod{
+    position: absolute;
+    width:15%;
+    padding:15px 5px 15px 5px;
+}
+.datum{
+    color:rgb(44, 44, 44);
+    font-size: 25px;
+}
+
+.dohodak{
+    top:58%;
+    left:50%;
+    transform:translate(-50%,-58%);
+    background-color: #00b2daa8;
+}
+.global_budzet{
+    top:17%;
+    left:50%;
+    transform:translate(-50%,-17%);
+    font-size: 55px;
+    text-align: center;
+    background-color: #ffffffa8;
+    color:rgb(44, 44, 44);
+}
+.rashod{
+    top:80%;
+    left:50%;
+    transform:translate(-50%,-80%);
+    background-color: #ee3b00a8;
+    
+}
+
+.tekst{
+    display:inline-block;
+    text-transform: uppercase;
+    padding-left:5px;
+}
+
+.value{
+    display:inline-block;
+    padding-left: 30px;
+    vertical-align: middle;
+}
+.percentage_dohodak{
+    display:inline-block;
+    padding:4px 10px 4px 10px;
+    margin:0px 0px 0px 10px;
+    font-size: 15px;
+
+}
+.percentage{
+    background-color: tomato;
+    display:inline-block;
+    padding:4px 10px 4px 10px;
+    margin:0px 0px 0px 10px;
+    font-size: 15px;
+    vertical-align: middle;
+
+}
+.dohodak, .rashod{
+    font-size: 20px;
+}
+.percentage, .percentage_dohodak, .value{
+    float:right;
+}
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++ CONTROL BAR ++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+.control_bar{
+    width:100%;
+    text-align: center;
+    padding:11px 0px 11px 0px;
+    background-color: rgba(241, 241, 241, 0.781);
+    border-bottom:0.5px solid rgb(209, 209, 209);
+}
+
+input[type='number'],input[type='text']{
+    width:20%;
+    padding:10px;
+    font-size:20px;
+    margin:0px 5px 0px 5px;
+    border-radius: 200px;
+    outline:none;
+    border:0.5px solid rgb(209, 209, 209);
+    vertical-align: middle;
+
+}
+input[name='vrednost']{
+    width:10%;
+}
+input[type='button']{
+  vertical-align: middle;
+    padding:3px 15px 3px 15px;
+    border-radius:200px;
+    background-color: none;
+    outline:none;
+    font-size: 25px;
+}
+select{
+    padding:8px;
+    vertical-align: middle;
+    font-size:20px;
+    border-radius:50px;
+    outline:none;
+    border:0.5px solid rgb(209, 209, 209);
+
+}
+.btn_red{
+    border:0.5px solid#ee3b00;
+    color:#ee3b00;
+}
+.btn_blue{
+    border:0.5px solid#00b2da;
+    color:#00b2da;
+}
+.blue_focus:focus{
+    box-shadow: 0px 0px 4px 1.5px #00b2daa8;
+}
+.red_focus:focus{
+    box-shadow: 0px 0px 4px 1.5px #ee3b00a8; 
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++ PROFILES +++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.profile_section{
+    padding-top:20px;
+    position:sticky;
+    top:0%;
+    float:left;
+    width:14%;
+}
+
+.accept_profile{
+    display: block;
+    background-color: transparent;
+    border:1px solid rgb(69, 124, 126);
+    color: rgb(69, 124, 126);
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 50%;
+    margin:0 auto;
+    margin-top:30px;
+    outline: none;
+    padding:5px 10px 5px 10px;
+}
+
+.accept_profile:hover, .accept_profile:active{
+    border:1px solid transparent;
+    cursor:pointer;
+    color:rgb(189, 236, 238);
+    background-color: rgb(69, 124, 126);
+}
+input[name='profil_naziv']{
+    margin-top: 5%;
+    width:50%;
+}
+
+.add_a_profile{
+    z-index:4;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 6px  rgb(189, 236, 238);
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:30%;
+    background-color: rgb(214, 214, 214);
+    text-align: center;
+    display:none;
+}
+
+.exit_creation{
+    position: absolute;
+    background-color: rgb(80, 80, 80);
+    padding:8px;
+    right:0px;
+    outline:none;
+    color:white;
+    border:none;
+}
+.exit_creation:hover{
+    cursor:pointer;
+}
+.add_a_profile .new_profile_title{
+    text-transform: uppercase;
+    padding-top:10px;
+    color: rgb(63, 63, 63);
+    font-size: 30px;
+    text-align: center;
+    margin:0 auto;
+    width:100%;
+    background-color: whitesmoke;
+    padding-bottom:10px;
+
+}
+
+.zamraci{
+    display:none;
+    width:100%;
+    height: 100%;
+    position:absolute;
+    z-index:3;
+    background-color: rgba(43, 43, 43, 0.404);
+}
+
+/*Podesiti profiles section profil izgled*/
+.profile:first-child{
+    margin-top:0px;
+}
+.profile{
+    background-color: tomato;
+    border-radius:0px 50px 50px 0px;
+    width:30%;
+    font-size:35px;
+    margin-top:10px;
+}
+.btn_name_value{
+   overflow: hidden;
+    animation-name: dugmad;
+    animation-delay: 0.1s;
+    animation-duration: 0s;
+    animation-fill-mode: backwards;
+    cursor:pointer;
+}
+.btn_name_value, .btn_profile_add, .btn_profile_remove{
+    display:none;
+    background-color:transparent;
+    border:none;
+    outline:none;
+    color:whitesmoke;
+    font-size:18px;
+    padding-top:10px;
+    cursor:pointer;
+}
+.btn_profile_add, .btn_profile_remove{
+    float:right;
+    padding-top: 10px;
+    padding-right:15px;
+    padding-left:5px;
+}
+.btn_name_value{
+    width:82%;
+}
+.profile:hover .hidden{
+    display:none;
+   
+}
+.profile:hover .btn_profile_add, .btn_profile_remove{
+  animation-name: dugmad;
+  animation-delay: 0.15s;
+  animation-duration: 0s;
+  animation-fill-mode: backwards;
+}
+@keyframes dugmad{
+    from{
+        visibility: hidden;
+    }
+    to{
+        visibility: visible;
+    }
+
+}
+.profile:hover .btn_name_value, .profile:hover .btn_profile_add, .profile:hover .btn_profile_remove{
+    display:inline-block;
+
+}
+.profile:hover{
+    transition:width 0.2s;
+    width:95%;
+}
+.hidden{
+    display:inline-block;
+    font-size: 28px;
+    text-align:center;
+    width:80%;
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++ DOHODAK/RASHOD ++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+.dohodak_section, .rashod_section{
+    float:left;
+    width:40%;
+}
+.dohodak_section .naslov{
+    color: rgb(65, 65, 65);
+    text-transform: uppercase;
+}
+.rashod_section .naslov{
+    color:#ee3b00c7;
+    text-transform: uppercase;
+}
+.items_rashod{
+    float:left;
+    
+}
+.dohodak_section{
+    padding-left:3.5%;
+}
+.rashod_section{
+    padding-left:1.5%;
+}
+.items_dohodak{
+float:right;
+}
+.items_rashod, .items_dohodak{
+    width:100%;
+    padding-bottom: 50px;
+}
+.naslov{
+    margin:0 auto;
+    font-size:32px;
+    width:40%;
+    text-align: center;
+    padding-top:5%;
+    padding-bottom:10%;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++ ITEM +++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.item_dohodak:first-child,.item_rashod:first-child{
+    border-top:0.5px solid rgb(209, 209, 209);
+}
+.item_dohodak,.item_rashod{
+    width:85%;
+    margin:0 auto;
+    font-size: 20px;
+    border-bottom:0.5px solid rgb(209, 209, 209);
+}
+.item_dohodak:nth-child(2n), .item_rashod:nth-child(2n){
+background-color: rgb(245, 245, 245);
+}
+.name_dohodak,.value_item_dohodak{
+    color:#00b2daa8;
+    font-size: 25px;
+}
+.name_rashod,.value_item_rashod{
+    color:#ee3b00c7;
+    font-size: 25px;
+
+}
+.value_item_rashod .percentage_rashod{
+    color:whitesmoke;
+}
+.name_dohodak,.name_rashod{
+    
+    width:50%;
+    text-align: left;
+    padding:15px 0px 15px 5px;
+    float:left;
+    
+}
+.value_item_rashod,.value_item_dohodak{
+    text-align:right;
+    float:left;
+    width:30%;
+    padding:15px 0px 15px 5px;
+}
+.item_dohodak::after, .item_rashod::after{
+    content:'';
+    clear:both;
+    display:block;
+}
+.btn_rashod,.btn_dohodak{
+    color:whitesmoke;
+    display:none;
+    width:5%;
+    margin-top:11px;
+    float:left;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid tomato; 
+    color:tomato;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    outline:none;
+    text-align: center;
+    padding:5px 0px 5px 0px;
+}
+.item_rashod:hover .btn_rashod, .item_dohodak:hover .btn_dohodak{
+    display: block;
+}
+.item_rashod:hover .value_item_rashod, .item_dohodak:hover .value_item_dohodak{
+    transform:translateX(-30%);
+    transition:transform 0.5s;
+}
+
+.percentage_rashod{
+    background-color: tomato;
+    display:inline-block;
+    font-size: 15px;
+    margin-left:10px;
+    vertical-align: middle;
+    padding:1px 10px 1px 10px;
+
+
+}

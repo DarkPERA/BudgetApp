@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <script defer src='script.js'></script>
+    <script defer src='testscript.js'></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class='zamraci'></div>
+    <div class='add_a_profile'>
+        <button class='exit_creation'>✖</button>
+        <div class='new_profile_title'>Unesite naziv novog<br> profila</div>
+        <input type='text' name='profil_naziv' placeholder="Naziv" >
+        <button class='accept_profile'>&check;</button>
+    </div>
+    <header class='top_container'>
+        <div class='datum'>
+            Budzet za %date%
+        </div>
+        <div class='global_budzet'>
+          + 0
+        </div>
+        <div class='dohodak'>
+            <div class='tekst'>
+                Dohodak:
+            </div>
+            <div class='percentage_dohodak'>
+                &nbsp;
+            </div>
+            <div class='value'>
+                + 0
+            </div>
+
+
+        </div>
+        <div class='rashod'>
+            <div class='tekst'>
+                Rashod:
+            </div>
+            <div class='percentage'>
+                0%
+            </div>
+            <div class='value'>
+                - 0
+            </div>
+
+        </div>
+    </header>
+    <section class='control_bar'>
+        <select class='blue_focus'>
+            <option value='Dohodak'>+</option>
+            <option value='Rashod'>-</option>
+        </select>
+        <input type='text' id='naziv' name='naziv' placeholder='Naziv objekta' class='blue_focus'  required>
+        <input type='number' id='vrednost' name='vrednost' placeholder='Vrednost' class='blue_focus' required>
+        <input type='button' name='zapocni' class='blue_focus btn_blue' value=&check;>
+    </section>
+    <section class='profile_section'>
+
+
+        <div class='profile'>
+            <div class='hidden'>
+                &raquo;
+            </div>
+           <button class='btn_name_value' id='add_profile'>
+            Add a profile
+           </button>
+           <button class='btn_profile_add'>
+            &rarr;
+           </button>
+        </div>
+        
+        <div class='profile' id='profile-0'>
+            <div class='hidden'>
+                &raquo;
+            </div>
+           <button class='btn_name_value' id='profil_naziv'>
+            Default
+           </button>
+           
+        </div>
+       
+       
+     
+        
+
+    </section>
+    <section class='dohodak_section'>
+        <div class='naslov'>
+            Dohodak
+        </div>
+        <div class='items_dohodak'>
+           
+            
+        </div>
+    </section>
+
+
+    <section class='rashod_section'>
+        <div class='naslov'>
+            Rashod
+        </div>
+        <div class='items_rashod'>
+       
+
+            
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+
+<!--Komentar-->
+
+<!-------------------------------PROFIL MAKETA----------------------------->
+
+<!-- <div class='profile'>
+            <div class='hidden'>
+                Hover
+            </div>
+            <a href='#' id='proba'><div class='profile_name'>    id obelezis
+                MarkoMarkoMarkoMarko
+            </div></a>
+           <a href='#' class='delete_profile_button'> <div class='delete_profile'>    napraviti ovu klasu
+               X
+            </div></a> 
+        </div>-->
+
+
+
+<!--------------------------------------DOHODAK MAKETA---------------------------->
+<!--
+                <div class='item_dohodak' >        id obelezis
+                    <div class='name_dohodak'>Automobilaaaa</div>
+                    <div class='value_item_dohodak'>+3000-00 </div>
+                    <button class='btn_dohodak'>X</button>
+                </div>-->
+
+
+
+
+
+<!-----------------------------------RASHOD MAKETA-------------------------------->
+<!--  <div class='item_rashod' >
+    <div class='name_rashod'>Automobilaaaa</div>
+    <div class='value_item_rashod'>+3000-00<div class='percentage_rashod'>--</div></div>
+    <button class='btn_rashod'>X</button>
+</div>-->
